@@ -56,3 +56,9 @@ function movies () {
 }
 
 
+//run functions
+
+twitter()
+spotify()
+
+
