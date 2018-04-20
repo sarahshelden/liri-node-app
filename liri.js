@@ -6,15 +6,17 @@ var command = process.argv[2];
 
 var Twitter =require("twitter");
 var Spotify = require('node-spotify-api');
+// var request = require('request'
+// );
 
 switch(command){
-    case "twitter":
+    case "my-tweets":
         twitter();
         break;
-    case "spotify":
+    case "spotify-this-song":
         spotify();
         break;
-    case "movies":
+    case "movie-this":
         movies();
         break;
     default:
@@ -24,20 +26,6 @@ switch(command){
 //twitter function
 //spotify function
 // movie function
-
-function spotify (){
-    var spotify = new Spotify(keys.spotify);
-
-    spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-        if (err) {
-            return console.log('Error occurred: ' + err);
-        }
-
-        console.log(data);
-    });
-
-    console.log("songs are playing");
-}
 
 function twitter (){
     console.log("twitter started");
@@ -51,14 +39,48 @@ function twitter (){
     });
 }
 
-function movies () {
-    console.log( "movies are playing")
+function spotify (){
+    var spotify = new Spotify(keys.spotify);
+
+    spotify.search({ type: 'track',
+
+        query: 'All the Small Things' }, function(err, data) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
+        var songInfo = data.tracks.items;
+        console.log("Artist(s): " + songInfo[0].artists[0].name);
+        console.log("Song Name: " + songInfo[0].name);
+        console.log("Preview Link: " + songInfo[0].preview_url);
+        console.log("Album: " + songInfo[0].album.name);
+        console.log("songs are playing");
+        console.log(data);
+    });
+
+
 }
+
+//
+function movies() {
+//     var movie = "Mr.Nobody";
+//     var queryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+//
+// }
+//
+// request(queryUrl)
+// {
+//     if (!movie) {
+//         movie = 'Mr Nobody';
+//     }
 
 
 //run functions
 
-twitter()
-spotify()
+    twitter();
+    spotify();
+    movies();
+}
+
+// });
 
 
