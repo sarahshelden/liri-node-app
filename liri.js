@@ -6,8 +6,7 @@ var command = process.argv[2];
 
 var Twitter =require("twitter");
 var Spotify = require('node-spotify-api');
-// var request = require('request'
-// );
+// var request = require('request');
 
 switch(command){
     case "my-tweets":
@@ -62,17 +61,29 @@ function spotify (){
 
 //
 function movies() {
-//     var movie = "Mr.Nobody";
-//     var queryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-//
-// }
-//
-// request(queryUrl)
-// {
-//     if (!movie) {
-//         movie = 'Mr Nobody';
-//     }
-
+    //     console.log("Movies");
+    //     //same as above, test if search term entered
+    //     var searchMovie;
+    //     if(secondCommand === undefined){
+    //         searchMovie = "Mr. Nobody";
+    //     }else{
+    //         searchMovie = secondCommand;
+    //     };
+    //     var url = 'http://www.omdbapi.com/?t=' + searchMovie +'&y=&plot=long&tomatoes=true&r=json&apikey=trilogy';
+    //     request(url, function(error, response, body){
+    //         if(!error && response.statusCode == 200){
+    //             console.log("Title: " + JSON.parse(body)["Title"]);
+    //             console.log("Year: " + JSON.parse(body)["Year"]);
+    //             console.log("IMDB Rating: " + JSON.parse(body)["imdbRating"]);
+    //             console.log("Country: " + JSON.parse(body)["Country"]);
+    //             console.log("Language: " + JSON.parse(body)["Language"]);
+    //             console.log("Plot: " + JSON.parse(body)["Plot"]);
+    //             console.log("Actors: " + JSON.parse(body)["Actors"]);
+    //             console.log("Rotten Tomatoes Rating: " + JSON.parse(body)["tomatoRating"]);
+    //             console.log("Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]);
+    //         }
+    //     });
+    // };
 
 //run functions
 
