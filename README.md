@@ -5,4 +5,5 @@ https://youtu.be/igHkJIfPLG0
 
 
 
-![ScreenShot](https://{github.com/sarahshelden/liri-node-app/blob/master/545971660%20(1).jpg})
+![Alt text](liri-node-app/545971660 (1).jpg?raw=true "working-liri-bot")
+
