@@ -3,7 +3,7 @@ liri node app week 10
 
 https://youtu.be/igHkJIfPLG0 
 
-![Screenshot](liri-node-app/545971660 (1).jpg)
--- working image is included in repo 
+https://drive.google.com/file/d/1JWtNqZe2O6C-Wp7ul4khxONV20OBpoHd/view
+
 
 
